@@ -1,0 +1,15 @@
+FemtoMIPS/compile/
+FemtoMIPS/log/
+FemtoMIPS/FemtoMIPS/
+*.lib
+*.log
+*.mgf
+*.wsw
+*.wsp
+*.set
+*.order
+*.cfg
+*.ini
+*.adf
+*.aws
+*.bak
