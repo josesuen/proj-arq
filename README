@@ -1,0 +1,22 @@
+Como clonar o repositório
+=========================
+
+Requisitos:
+    *  ter o git instalado no PC
+    *  ter instalado o aplicativo para desktop do Google Drive 
+
+1) Abra o terminal (ou o GitShell) e mude para a pasta onde quer clonar o projeto;
+2) Faça uma cópia local do repositório utilizando o comando:
+
+        git clone <<caminho para a sua pasta local do Google Drive>>/PROJETO xXW!150N G4M3RXx/FemtoMIPS.git
+
+3) Comece a trabalhar CRIANDO UM PROJETO DO ACTIVE HDL com o nome de FemtoMIPS no seu novo repositório local;
+4) Quando quiser commitar suas alterações, dê um git push.
+5) Antes de retomar seu trabalho, atualize-se com git pull.
+
+
+Como não quebrar o repositório
+==============================
+
+Nunca trabalhe diretamente com o conteúdo do repositório que está na pasta compartilhada do Google Drive.
+
