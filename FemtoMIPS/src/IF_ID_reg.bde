@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 360
+ FREEID 377
  VARIABLES
  {
   #ARCHITECTURE="IF_ID_reg"
@@ -16,7 +16,7 @@ HEADER
   #DEFAULT_RANGE5="<range<index=\"0\"><name=\"rd\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE6="<range<index=\"0\"><name=\"rs\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE7="<range<index=\"0\"><name=\"rt\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #ENTITY="Fub1"
+  #ENTITY="IF_ID_reg"
   #LANGUAGE="VHDL"
   AUTHOR="gabriel.casarin@hotmail.com"
   COMPANY="USP"
@@ -946,7 +946,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  343, 0, 0
+  TEXT  360, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -957,7 +957,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  344, 0, 0
+  TEXT  361, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -968,7 +968,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  345, 0, 0
+  TEXT  362, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -978,7 +978,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  346, 0, 0
+  TEXT  363, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -990,7 +990,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  347, 0, 0
+  TEXT  364, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -1003,7 +1003,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  348, 0, 0
+  TEXT  365, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -1013,7 +1013,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  349, 0, 0
+  TEXT  366, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1025,7 +1025,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  350, 0, 0
+  TEXT  367, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -1035,7 +1035,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  351, 0, 0
+  TEXT  368, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -1046,7 +1046,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  352, 0, 0
+  GROUP  369, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1120,2001,1501)
@@ -1058,7 +1058,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  353, 0, 0
+  GROUP  370, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1320,2001,1321)
@@ -1070,7 +1070,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  354, 0, 0
+  GROUP  371, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1260,2001,1261)
@@ -1082,7 +1082,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  355, 0, 0
+  GROUP  372, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1380,2001,1381)
@@ -1094,7 +1094,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  356, 0, 0
+  GROUP  373, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1440,2001,1441)
@@ -1106,7 +1106,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  357, 0, 0
+  GROUP  374, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1120,1301,1261)
@@ -1117,7 +1117,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  358, 0, 0
+  GROUP  375, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1260,1301,1501)
@@ -1128,7 +1128,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  359, 0, 0
+  BMPPICT  376, 0, 0
   {
    PAGEALIGN 10
    RECT (1140,1180,1279,1225)
