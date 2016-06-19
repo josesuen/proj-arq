@@ -2,14 +2,15 @@ SCHM0106
 
 HEADER
 {
- FREEID 93
+ FREEID 113
  VARIABLES
  {
   #ARCHITECTURE="desl2"
   #BLOCKTABLE_FILE="#table.bde"
   #BLOCKTABLE_INCLUDED="1"
-  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"in1\"><left=\"numeroBits - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"out1\"><left=\"numeroBits - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"bus51\"><left=\"NumeroBits - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"in1\"><left=\"NumeroBits - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE2="<range<index=\"0\"><name=\"out1\"><left=\"NumeroBits - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #ENTITY="desl2"
   #LANGUAGE="VHDL"
   AUTHOR="gabriel.casarin@hotmail.com"
@@ -195,11 +196,12 @@ PAGE ""
    {
     #COMPONENT="BusOutput"
     #CUSTOM_NAME=""
+    #DOWNTO="1"
     #LIBRARY="#terminals"
-    #REFERENCE="Out1(numeroBits - 1:0)"
+    #REFERENCE="Out1(NumeroBits - 1:0)"
     #SYMBOL="BusOutput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
-    #VHDL_TYPE="std_logic_vector"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
    COORD (1540,720)
    VERTEXES ( (2,23) )
@@ -211,7 +213,7 @@ PAGE ""
   TEXT  24, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (1620,703,1919,738)
+   RECT (1620,703,1924,738)
    ALIGN 4
    MARGINS (1,1)
    PARENT 22
@@ -223,7 +225,7 @@ PAGE ""
     #COMPONENT="BusInput"
     #CUSTOM_NAME=""
     #LIBRARY="#terminals"
-    #REFERENCE="In1(numeroBits - 1:0)"
+    #REFERENCE="In1(NumeroBits - 1:0)"
     #SYMBOL="BusInput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="std_logic_vector"
@@ -238,7 +240,7 @@ PAGE ""
   TEXT  27, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (325,703,600,738)
+   RECT (320,703,600,738)
    ALIGN 6
    MARGINS (1,1)
    PARENT 25
@@ -325,21 +327,36 @@ PAGE ""
   {
    COORD (1200,720)
   }
-  NET BUS  51, 0, 0
   BUS  52, 0, 0
   {
-   NET 51
+   NET 95
    VTX 49, 50
   }
   VTX  53, 0, 0
   {
    COORD (1320,720)
   }
-  NET BUS  57, 0, 0
   BUS  58, 0, 0
   {
-   NET 57
+   NET 93
    VTX 23, 53
+  }
+  NET BUS  93, 0, 0
+  {
+   VARIABLES
+   {
+    #DOWNTO="1"
+    #NAME="Out1(NumeroBits - 1:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  95, 0, 0
+  {
+   VARIABLES
+   {
+    #DOWNTO="1"
+    #NAME="BUS51(NumeroBits - 1:0)"
+   }
   }
  }
  
@@ -366,7 +383,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  76, 0, 0
+  TEXT  96, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -377,7 +394,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  77, 0, 0
+  TEXT  97, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -388,7 +405,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  78, 0, 0
+  TEXT  98, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -398,7 +415,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  79, 0, 0
+  TEXT  99, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -410,7 +427,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  80, 0, 0
+  TEXT  100, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -423,7 +440,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  81, 0, 0
+  TEXT  101, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -433,7 +450,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  82, 0, 0
+  TEXT  102, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -445,7 +462,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  83, 0, 0
+  TEXT  103, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -455,7 +472,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  84, 0, 0
+  TEXT  104, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -466,7 +483,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  85, 0, 0
+  GROUP  105, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1120,2001,1501)
@@ -478,7 +495,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  86, 0, 0
+  GROUP  106, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1320,2001,1321)
@@ -490,7 +507,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  87, 0, 0
+  GROUP  107, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1260,2001,1261)
@@ -502,7 +519,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  88, 0, 0
+  GROUP  108, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1380,2001,1381)
@@ -514,7 +531,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  89, 0, 0
+  GROUP  109, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1440,2001,1441)
@@ -526,7 +543,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  90, 0, 0
+  GROUP  110, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1120,1301,1261)
@@ -537,7 +554,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  91, 0, 0
+  GROUP  111, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1260,1301,1501)
@@ -548,7 +565,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  92, 0, 0
+  BMPPICT  112, 0, 0
   {
    PAGEALIGN 10
    RECT (1140,1180,1279,1225)
