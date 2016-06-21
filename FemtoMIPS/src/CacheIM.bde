@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 96
+ FREEID 113
  VARIABLES
  {
   #ARCHITECTURE="IM"
@@ -40,7 +40,7 @@ HEADER
     #LANGUAGE="VHDL"
     #MODIFIED="1466257465"
     #NAME="memoria"
-    #PRAGMED_GENERICS="NA;addr_len;word_len"
+    #PRAGMED_GENERICS="NA;addr_len;word_len;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="cc4e92b3-2e40-4f53-a710-11fbc0b3eae9"
    }
   }
@@ -322,13 +322,15 @@ PAGE ""
    {
     #COMPONENT="memoria"
     #CUSTOM_NAME=""
-    #GENERIC0="addr_len : INTEGER := addr_len"
-    #GENERIC1="word_len : INTEGER := word_len"
-    #GENERIC2="Tz : TIME := 0 ns"
-    #GENERIC3="Twrite : TIME := 0 ns"
-    #GENERIC4="Tsetup : TIME := 0 ns"
-    #GENERIC5="Tread : TIME := 0 ns"
+    #GENERIC0="NA : STRING := \"teste.txt\""
+    #GENERIC1="addr_len : INTEGER := addr_len"
+    #GENERIC2="word_len : INTEGER := word_len"
+    #GENERIC3="Tz : TIME := 0 ns"
+    #GENERIC4="Twrite : TIME := 0 ns"
+    #GENERIC5="Tsetup : TIME := 0 ns"
+    #GENERIC6="Tread : TIME := 0 ns"
     #LIBRARY="#default"
+    #NO_CONF="1"
     #PRAGMED_GENERICS="NA;addr_len;word_len"
     #REFERENCE="U1"
     #SYMBOL="memoria"
@@ -526,7 +528,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  79, 0, 0
+  TEXT  96, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -537,7 +539,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  80, 0, 0
+  TEXT  97, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -548,7 +550,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  81, 0, 0
+  TEXT  98, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -558,7 +560,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  82, 0, 0
+  TEXT  99, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -570,7 +572,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  83, 0, 0
+  TEXT  100, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -583,7 +585,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  84, 0, 0
+  TEXT  101, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -593,7 +595,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  85, 0, 0
+  TEXT  102, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -605,7 +607,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  86, 0, 0
+  TEXT  103, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -615,7 +617,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  87, 0, 0
+  TEXT  104, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -626,7 +628,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  88, 0, 0
+  GROUP  105, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1120,2001,1501)
@@ -638,7 +640,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  89, 0, 0
+  GROUP  106, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1320,2001,1321)
@@ -650,7 +652,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  90, 0, 0
+  GROUP  107, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1260,2001,1261)
@@ -662,7 +664,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  91, 0, 0
+  GROUP  108, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1380,2001,1381)
@@ -674,7 +676,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  92, 0, 0
+  GROUP  109, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1440,2001,1441)
@@ -686,7 +688,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  93, 0, 0
+  GROUP  110, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1120,1301,1261)
@@ -697,7 +699,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  94, 0, 0
+  GROUP  111, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1260,1301,1501)
@@ -708,7 +710,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  95, 0, 0
+  BMPPICT  112, 0, 0
   {
    PAGEALIGN 10
    RECT (1140,1180,1279,1225)
