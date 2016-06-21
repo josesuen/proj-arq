@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 668
+ FREEID 702
  VARIABLES
  {
   #ARCHITECTURE="EX"
@@ -662,7 +662,7 @@ HEADER
    }
   }
  }
- SYMBOL "#default" "ALUcontrol" "ALUcontrol"
+ SYMBOL "femtomips" "ALUcontrol" "ALUcontrol"
  {
   HEADER
   {
@@ -671,7 +671,7 @@ HEADER
     #CUSTOM_NAME=""
     #FUB="1"
     #LANGUAGE="VHDL"
-    #MODIFIED="1466307367"
+    #MODIFIED="1466541374"
     #NAME="Fub4"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="db24b068-cb89-475e-8b66-b5441d51f9dd"
    }
@@ -729,11 +729,12 @@ HEADER
       #MODIFIED="1"
       #NAME="funct(5:0)"
       #NUMBER="0"
+      #SIDE="left"
      }
-     LINE  1, 0, 0
+     LINE  2, 0, 0
      {
       OUTLINE 0,0, (0,0,0)
-      POINTS ( (1,-10), (1,10), (11,0) )
+      POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
       FILL (0,(0,0,0),0)
      }
     }
@@ -749,10 +750,10 @@ HEADER
       #NUMBER="1"
       #SIDE="top"
      }
-     LINE  1, 0, 0
+     LINE  2, 0, 0
      {
       OUTLINE 0,0, (0,0,0)
-      POINTS ( (0,0), (-10,10), (10,10), (0,0) )
+      POINTS ( (0,0), (10,10), (-10,10), (0,0) )
       FILL (0,(0,0,0),0)
      }
     }
@@ -766,11 +767,12 @@ HEADER
       #MODIFIED="1"
       #NAME="ALUop(1:0)"
       #NUMBER="0"
+      #SIDE="left"
      }
-     LINE  1, 0, 0
+     LINE  2, 0, 0
      {
       OUTLINE 0,0, (0,0,0)
-      POINTS ( (1,-10), (1,10), (11,0) )
+      POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
       FILL (0,(0,0,0),0)
      }
     }
@@ -1540,7 +1542,7 @@ PAGE ""
     #COMPONENT="ALUcontrol"
     #CUSTOM_NAME=""
     #IMPL="ALUcontrol"
-    #LIBRARY="#default"
+    #LIBRARY="femtomips"
     #REFERENCE="U6"
     #SYMBOL="ALUcontrol"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="db24b068-cb89-475e-8b66-b5441d51f9dd"
@@ -1914,7 +1916,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  651, 0, 0
+  TEXT  685, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1925,7 +1927,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  652, 0, 0
+  TEXT  686, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -1936,7 +1938,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  653, 0, 0
+  TEXT  687, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -1946,7 +1948,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  654, 0, 0
+  TEXT  688, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1958,7 +1960,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  655, 0, 0
+  TEXT  689, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -1971,7 +1973,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  656, 0, 0
+  TEXT  690, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -1981,7 +1983,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  657, 0, 0
+  TEXT  691, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1993,7 +1995,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  658, 0, 0
+  TEXT  692, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -2003,7 +2005,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  659, 0, 0
+  TEXT  693, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -2014,7 +2016,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  660, 0, 0
+  GROUP  694, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1120,2001,1501)
@@ -2026,7 +2028,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  661, 0, 0
+  GROUP  695, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1320,2001,1321)
@@ -2038,7 +2040,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  662, 0, 0
+  GROUP  696, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1260,2001,1261)
@@ -2050,7 +2052,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  663, 0, 0
+  GROUP  697, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1380,2001,1381)
@@ -2062,7 +2064,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  664, 0, 0
+  GROUP  698, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1440,2001,1441)
@@ -2074,7 +2076,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  665, 0, 0
+  GROUP  699, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1120,1301,1261)
@@ -2085,7 +2087,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  666, 0, 0
+  GROUP  700, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1260,1301,1501)
@@ -2096,7 +2098,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  667, 0, 0
+  BMPPICT  701, 0, 0
   {
    PAGEALIGN 10
    RECT (1140,1180,1279,1225)
