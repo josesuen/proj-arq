@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 983
+ FREEID 1050
  VARIABLES
  {
   #ARCHITECTURE="ID"
@@ -25,7 +25,7 @@ HEADER
   PAGECOUNT="2"
   TITLE="No Title"
  }
- SYMBOL "biblioteca_de_componentes" "dualregfile" "dualregfile"
+ SYMBOL "biblioteca_de_componentes" "DualRegFile" "dualregfile"
  {
   HEADER
   {
@@ -33,25 +33,26 @@ HEADER
    {
     #CUSTOM_NAME=""
     #DESCRIPTION=""
-    #GENERIC0="NBend : integer := 4"
-    #GENERIC1="NBdado : integer := 8"
+    #GENERIC0="NBend : integer := 3"
+    #GENERIC1="NBdado : integer := 16"
     #GENERIC2="Tread : time := 5 ns"
     #GENERIC3="Twrite : time := 5 ns"
     #HDL_ENTRIES=
 "library STD,IEEE;\n"+
 "use STD.STANDARD.all,ieee.std_logic_1164.all;"
     #LANGUAGE="VHDL"
-    #MODIFIED="1354555840"
+    #MODIFIED="1466530669"
     #NAME="dualregfile"
     #PRAGMED_GENERICS="NBend;NBdado;Tread;Twrite;"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="9b624301-b54f-4e65-8709-ce2c02f96150"
    }
   }
   PAGE "" 
   {
    PAGEHEADER
    {
-    RECT (0,0,440,260)
-    FREEID 16
+    RECT (0,0,440,340)
+    FREEID 18
    }
    
    BODY
@@ -62,7 +63,7 @@ HEADER
      {
       #OUTLINE_FILLING="1"
      }
-     AREA (20,20,420,240)
+     AREA (20,20,420,320)
     }
     TEXT  3, 0, 0
     {
@@ -119,6 +120,14 @@ HEADER
      ALIGN 4
      MARGINS (1,1)
      PARENT 14
+    }
+    TEXT  17, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,250,70,274)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 16
     }
     PIN  2, 0, 0
     {
@@ -250,6 +259,22 @@ HEADER
       FILL (1,(0,0,0),0)
      }
     }
+    PIN  16, 0, 0
+    {
+     COORD (0,260)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="reset"
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,1, (0,0,255)
+      POINTS ( (0,0), (20,0) )
+      FILL (1,(0,0,0),0)
+     }
+    }
    }
   }
  }
@@ -261,15 +286,16 @@ HEADER
    {
     #CUSTOM_NAME=""
     #DESCRIPTION=""
-    #GENERIC0="NumeroBits:integer:=8"
-    #GENERIC1="Tsel:time:=2 ns"
-    #GENERIC2="Tdata:time:=1 ns"
+    #GENERIC0="NumeroBits : integer := 8"
+    #GENERIC1="Tsel : time := 2 ns"
+    #GENERIC2="Tdata : time := 1 ns"
     #HDL_ENTRIES=
 "library STD,IEEE;\n"+
 "use STD.STANDARD.all,ieee.std_logic_1164.all;"
     #LANGUAGE="VHDL"
     #MODIFIED="1354555841"
     #NAME="multiplexador"
+    #PRAGMED_GENERICS="NumeroBits;Tsel;Tdata;"
    }
   }
   PAGE "" 
@@ -532,38 +558,6 @@ PAGE ""
  
  BODY
  {
-  INSTANCE  123, 0, 0
-  {
-   VARIABLES
-   {
-    #COMPONENT="dualregfile"
-    #CUSTOM_NAME=""
-    #GENERIC0="NBend : integer := 3"
-    #GENERIC1="NBdado : integer := word_len"
-    #LIBRARY="biblioteca_de_componentes"
-    #NO_CONF="1"
-    #PRAGMED_GENERICS="NBend;NBdado;Tread;Twrite"
-    #REFERENCE="U4"
-    #SYMBOL="dualregfile"
-    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
-   }
-   COORD (960,440)
-   VERTEXES ( (12,291), (6,701), (14,703), (2,705), (8,758), (4,762), (10,865) )
-   PINPROP 2,"#PIN_STATE","0"
-   PINPROP 4,"#PIN_STATE","0"
-   PINPROP 6,"#PIN_STATE","0"
-   PINPROP 8,"#PIN_STATE","0"
-   PINPROP 10,"#PIN_STATE","0"
-   PINPROP 12,"#PIN_STATE","0"
-   PINPROP 14,"#PIN_STATE","0"
-  }
-  TEXT  132, 0, 0
-  {
-   TEXT "$#COMPONENT"
-   RECT (960,700,1097,735)
-   MARGINS (1,1)
-   PARENT 123
-  }
   INSTANCE  156, 0, 0
   {
    VARIABLES
@@ -1128,6 +1122,93 @@ PAGE ""
    NET 930
    VTX 928, 929
   }
+  INSTANCE  983, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="reset"
+    #SYMBOL="Input"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (700,1180)
+   VERTEXES ( (2,990) )
+  }
+  NET WIRE  984, 0, 0
+  TEXT  988, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (582,1163,649,1198)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 983
+  }
+  VTX  989, 0, 0
+  {
+   COORD (960,700)
+  }
+  VTX  990, 0, 0
+  {
+   COORD (700,1180)
+  }
+  VTX  991, 0, 0
+  {
+   COORD (920,700)
+  }
+  WIRE  992, 0, 0
+  {
+   NET 984
+   VTX 989, 991
+  }
+  VTX  993, 0, 0
+  {
+   COORD (920,1180)
+  }
+  WIRE  994, 0, 0
+  {
+   NET 984
+   VTX 991, 993
+  }
+  WIRE  995, 0, 0
+  {
+   NET 984
+   VTX 993, 990
+  }
+  INSTANCE  1013, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="DualRegFile"
+    #CUSTOM_NAME=""
+    #GENERIC0="NBend : integer := 3"
+    #GENERIC1="NBdado : integer := 32"
+    #LIBRARY="biblioteca_de_componentes"
+    #NO_CONF="1"
+    #PRAGMED_GENERICS="NBend;NBdado;Tread;Twrite"
+    #REFERENCE="U2"
+    #SYMBOL="dualregfile"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="9b624301-b54f-4e65-8709-ce2c02f96150"
+   }
+   COORD (960,440)
+   VERTEXES ( (2,705), (4,762), (6,701), (8,758), (10,865), (12,291), (14,703), (16,989) )
+  }
+  TEXT  1014, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (960,404,999,439)
+   ALIGN 8
+   MARGINS (1,1)
+   PARENT 1013
+  }
+  TEXT  1015, 0, 0
+  {
+   TEXT "$#COMPONENT"
+   RECT (960,780,1123,815)
+   MARGINS (1,1)
+   PARENT 1013
+  }
  }
  
 }
@@ -1153,7 +1234,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  966, 0, 0
+  TEXT  1033, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1164,7 +1245,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  967, 0, 0
+  TEXT  1034, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -1175,7 +1256,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  968, 0, 0
+  TEXT  1035, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -1185,7 +1266,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  969, 0, 0
+  TEXT  1036, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1197,7 +1278,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  970, 0, 0
+  TEXT  1037, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -1210,7 +1291,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  971, 0, 0
+  TEXT  1038, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -1220,7 +1301,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  972, 0, 0
+  TEXT  1039, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1232,7 +1313,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  973, 0, 0
+  TEXT  1040, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -1242,7 +1323,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  974, 0, 0
+  TEXT  1041, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -1253,7 +1334,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  975, 0, 0
+  GROUP  1042, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,1758,3108,2139)
@@ -1265,7 +1346,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  976, 0, 0
+  GROUP  1043, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,1958,3108,1959)
@@ -1277,7 +1358,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  977, 0, 0
+  GROUP  1044, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,1898,3108,1899)
@@ -1289,7 +1370,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  978, 0, 0
+  GROUP  1045, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,2018,3108,2019)
@@ -1301,7 +1382,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  979, 0, 0
+  GROUP  1046, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,2078,3108,2079)
@@ -1313,7 +1394,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  980, 0, 0
+  GROUP  1047, 0, 0
   {
    PAGEALIGN 10
    RECT (2407,1758,2408,1899)
@@ -1324,7 +1405,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  981, 0, 0
+  GROUP  1048, 0, 0
   {
    PAGEALIGN 10
    RECT (2407,1898,2408,2139)
@@ -1335,7 +1416,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  982, 0, 0
+  BMPPICT  1049, 0, 0
   {
    PAGEALIGN 10
    RECT (2247,1818,2386,1863)

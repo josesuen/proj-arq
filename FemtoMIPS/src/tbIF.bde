@@ -498,14 +498,14 @@ HEADER
    VARIABLES
    {
     #CUSTOM_NAME=""
-    #GENERIC0="word_len : INTEGER := 32"
+    #GENERIC0="word_len : integer := 32"
     #HDL_ENTRIES=
 "library STD,IEEE;\n"+
 "use std.standard.all,ieee.std_logic_1164.all;"
     #LANGUAGE="VHDL"
     #MODIFIED="1466297943"
     #NAME="ID"
-    #PRAGMED_GENERICS="word_len"
+    #PRAGMED_GENERICS="word_len;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="4ea1ff8a-00dd-42fc-b134-41442c9d6039"
    }
   }
@@ -800,7 +800,7 @@ HEADER
     #LANGUAGE="VHDL"
     #MODIFIED="1466296528"
     #NAME="Fub1"
-    #PRAGMED_GENERICS="addr_len;word_len"
+    #PRAGMED_GENERICS="word_len;addr_len;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
    }
   }
