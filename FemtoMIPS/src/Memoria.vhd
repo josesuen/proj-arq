@@ -77,7 +77,7 @@ begin
     -- Roda somente uma vez na inicialização
     if ehInicio = '1' then
       ehInicio := '0';
-      -- Insere o conteúdo na memória
+      -- Insere o conteudo na memoria
       conteudoMem <= fill_memory;
     end if;
     if clk'event and clk='1' then
@@ -87,12 +87,13 @@ begin
             ReadData <= conteudoMem(addr);
             -- pronto <= '1';
         when '1' =>
-            conteudoMem(addr) <= WriteData;
+			conteudoMem(addr) <= WriteData;
+			--ReadData <= conteudoMem(addr);
             -- pronto <= '1';
         when others =>
             Null;
       end case;
     end if;
   end process ; -- CargaInicial
-
+  
 end architecture ; -- behave
