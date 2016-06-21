@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 144
+ FREEID 189
  VARIABLES
  {
   #ARCHITECTURE="UC"
@@ -65,7 +65,7 @@ PAGE ""
    LABEL "Decodificacao"
    TEXT 
 "Decodificacao :\n"+
-"process (opcode, clk)\n"+
+"process (clk, opcode)\n"+
 "-- Section above this comment may be overwritten according to\n"+
 "-- \"Update sensitivity list automatically\" option status\n"+
 "-- declarations\n"+
@@ -101,17 +101,14 @@ PAGE ""
 "\t\twhen others => Null;\n"+
 "\tend case;\n"+
 "end if;\n"+
-"end process Decodificacao;\n"+
-"\n"+
-"\n"+
-""
+"end process Decodificacao;"
    RECT (1060,1000,1660,1320)
    MARGINS (20,20)
    MULTILINE
    SYNTAXCOLORED
    SHOWLABEL
    CORNER 10
-   VTX (  34, 40, 50 )
+   VTX (  40, 50, 152, 161, 165, 169 )
    VARIABLES
    {
     #DIRECTION_LIST="40 50 "
@@ -129,24 +126,16 @@ PAGE ""
     #SYMBOL="BusOutput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
    }
-   COORD (1960,1160)
-   VERTEXES ( (2,33) )
+   COORD (1980,1060)
+   VERTEXES ( (2,151) )
   }
   TEXT  32, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (2012,1143,2162,1178)
+   RECT (2032,1043,2182,1078)
    ALIGN 4
    MARGINS (1,1)
    PARENT 31
-  }
-  VTX  33, 0, 0
-  {
-   COORD (1960,1160)
-  }
-  VTX  34, 0, 0
-  {
-   COORD (1660,1160)
   }
   NET BUS  35, 0, 0
   {
@@ -154,11 +143,6 @@ PAGE ""
    {
     #NAME="ALUop(1:0)"
    }
-  }
-  BUS  36, 0, 0
-  {
-   NET 35
-   VTX 33, 34
   }
   INSTANCE  37, 0, 0
   {
@@ -215,6 +199,145 @@ PAGE ""
    NET 22
    VTX 50, 51
   }
+  VTX  151, 0, 0
+  {
+   COORD (1980,1060)
+  }
+  VTX  152, 0, 0
+  {
+   COORD (1660,1060)
+  }
+  BUS  153, 0, 0
+  {
+   NET 35
+   VTX 151, 152
+  }
+  INSTANCE  154, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="RegWrite"
+    #SYMBOL="Output"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (1980,1120)
+   VERTEXES ( (2,160) )
+  }
+  TEXT  155, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (2032,1103,2158,1138)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 154
+  }
+  INSTANCE  156, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="RegDst"
+    #SYMBOL="Output"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (1980,1160)
+   VERTEXES ( (2,164) )
+  }
+  TEXT  157, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (2032,1143,2131,1178)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 156
+  }
+  INSTANCE  158, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="ALUsrc"
+    #SYMBOL="Output"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (1980,1200)
+   VERTEXES ( (2,168) )
+  }
+  TEXT  159, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (2032,1183,2130,1218)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 158
+  }
+  VTX  160, 0, 0
+  {
+   COORD (1980,1120)
+  }
+  VTX  161, 0, 0
+  {
+   COORD (1660,1120)
+  }
+  NET WIRE  162, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="RegWrite"
+   }
+  }
+  WIRE  163, 0, 0
+  {
+   NET 162
+   VTX 160, 161
+  }
+  VTX  164, 0, 0
+  {
+   COORD (1980,1160)
+  }
+  VTX  165, 0, 0
+  {
+   COORD (1660,1160)
+  }
+  NET WIRE  166, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="RegDst"
+   }
+  }
+  WIRE  167, 0, 0
+  {
+   NET 166
+   VTX 164, 165
+  }
+  VTX  168, 0, 0
+  {
+   COORD (1980,1200)
+  }
+  VTX  169, 0, 0
+  {
+   COORD (1660,1200)
+  }
+  NET WIRE  170, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="ALUsrc"
+   }
+  }
+  WIRE  171, 0, 0
+  {
+   NET 170
+   VTX 168, 169
+  }
  }
  
 }
@@ -240,7 +363,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  127, 0, 0
+  TEXT  172, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -251,7 +374,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  128, 0, 0
+  TEXT  173, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -262,7 +385,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  129, 0, 0
+  TEXT  174, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -272,7 +395,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  130, 0, 0
+  TEXT  175, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -284,7 +407,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  131, 0, 0
+  TEXT  176, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -297,7 +420,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  132, 0, 0
+  TEXT  177, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -307,7 +430,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  133, 0, 0
+  TEXT  178, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -319,7 +442,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  134, 0, 0
+  TEXT  179, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -329,7 +452,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  135, 0, 0
+  TEXT  180, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -340,7 +463,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  136, 0, 0
+  GROUP  181, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,1758,3108,2139)
@@ -352,7 +475,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  137, 0, 0
+  GROUP  182, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,1958,3108,1959)
@@ -364,7 +487,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  138, 0, 0
+  GROUP  183, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,1898,3108,1899)
@@ -376,7 +499,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  139, 0, 0
+  GROUP  184, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,2018,3108,2019)
@@ -388,7 +511,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  140, 0, 0
+  GROUP  185, 0, 0
   {
    PAGEALIGN 10
    RECT (2227,2078,3108,2079)
@@ -400,7 +523,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  141, 0, 0
+  GROUP  186, 0, 0
   {
    PAGEALIGN 10
    RECT (2407,1758,2408,1899)
@@ -411,7 +534,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  142, 0, 0
+  GROUP  187, 0, 0
   {
    PAGEALIGN 10
    RECT (2407,1898,2408,2139)
@@ -422,7 +545,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  143, 0, 0
+  BMPPICT  188, 0, 0
   {
    PAGEALIGN 10
    RECT (2247,1818,2386,1863)
