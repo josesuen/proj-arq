@@ -33,8 +33,8 @@ HEADER
    {
     #CUSTOM_NAME=""
     #DESCRIPTION=""
-    #GENERIC0="NBend : integer := 3"
-    #GENERIC1="NBdado : integer := 16"
+    #GENERIC0="NBend : integer := 4"
+    #GENERIC1="NBdado : integer := 8"
     #GENERIC2="Tread : time := 5 ns"
     #GENERIC3="Twrite : time := 5 ns"
     #HDL_ENTRIES=
