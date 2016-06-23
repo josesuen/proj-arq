@@ -5,8 +5,8 @@ with open('ld.hex') as file_in, open('ld.txt', 'w') as file_out:
     for line in file_in.readlines():
         file_out.write('{0:0>16b}{1}\n'.format(i, line[:-1]))
         i += 4
-    file_out.write("{0:0>16b}{1:0>32b}\n".format(100, 7))
-    file_out.write("{0:0>16b}{1:0>32b}\n".format(104, 13))
+#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x0, 7))
+#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x4, 13))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2000, 9))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2004, 6))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2008, 1))

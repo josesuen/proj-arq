@@ -74,7 +74,7 @@ begin
     variable ehInicio: std_logic := '1';
     variable addr : integer range 0 to (2**(addr_len-2) - 1);
   begin
-    -- Roda somente uma vez na inicialização
+    -- Roda somente uma vez na inicializacao
     if ehInicio = '1' then
       ehInicio := '0';
       -- Insere o conteudo na memoria
@@ -84,7 +84,11 @@ begin
       addr := to_integer(unsigned(Address))/4;
       case rw is
         when '0' =>
-            ReadData <= conteudoMem(addr);
+			if addr > (2**(addr_len-2)-1) then
+				ReadData <= (others => 'U');
+			else
+				ReadData <= conteudoMem(addr);
+			end if;
             -- pronto <= '1';
         when '1' =>
 			conteudoMem(addr) <= WriteData;
