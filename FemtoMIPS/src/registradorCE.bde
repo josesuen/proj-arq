@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 1373
+ FREEID 1409
  VARIABLES
  {
   #ARCHITECTURE="registradorCE"
@@ -144,13 +144,13 @@ PAGE ""
    SYNTAXCOLORED
    SHOWLABEL
    CORNER 10
-   VTX (  514, 520, 1214, 1266, 1096, 1064 )
+   VTX (  514, 520, 1064, 1096, 1214, 1266 )
    VARIABLES
    {
-    #DIRECTION_LIST="514 1214 1266 1096 1064 "
+    #DIRECTION_LIST="514 1064 1096 1214 1266 "
     #UPDATE_SENS_LIST="1"
    }
-   LIST (  1214, 1266, 1096, 1064 )
+   LIST (  1064, 1096, 1214, 1266 )
   }
   SIGNALASSIGN  72, 0, 0
   {
@@ -317,10 +317,13 @@ PAGE ""
   {
    LABEL "Generic_2"
    TEXT 
-"Tprop : time := 5 ns;\n"+
+"Tprop : time := 0 ns;\n"+
 ""
    RECT (900,1040,1280,1120)
+   OUTLINE 5,1, (0,0,0)
+   FILL (0,(255,219,179),0)
    MARGINS (20,20)
+   FONT (12,0,0,400,0,0,0,"Arial")
    MULTILINE
    SYNTAXCOLORED
    SHOWTEXT
@@ -330,10 +333,13 @@ PAGE ""
   {
    LABEL "Generic_3"
    TEXT 
-"Tsetup : time := 2 ns;\n"+
+"Tsetup : time := 0 ns;\n"+
 ""
    RECT (1320,1040,1700,1120)
+   OUTLINE 5,1, (0,0,0)
+   FILL (0,(255,219,179),0)
    MARGINS (20,20)
+   FONT (12,0,0,400,0,0,0,"Arial")
    MULTILINE
    SYNTAXCOLORED
    SHOWTEXT
@@ -486,7 +492,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  1355, 0, 0
+  TEXT  1391, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -497,17 +503,17 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1356, 0, 0
+  TEXT  1392, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
-   RECT (1310,1393,1446,1427)
+   RECT (1310,1393,1492,1428)
    ALIGN 4
    MARGINS (1,1)
    COLOR (0,0,0)
    FONT (12,0,0,700,0,128,0,"Arial")
   }
-  TEXT  1357, 0, 0
+  TEXT  1393, 0, 0
   {
    PAGEALIGN 10
    TEXT "Titulo:"
@@ -517,66 +523,66 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1358, 0, 0
+  TEXT  1394, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
    TEXT "$TITLE"
-   RECT (1310,1453,1893,1487)
+   RECT (1310,1453,2069,1488)
    ALIGN 4
    MARGINS (1,1)
    COLOR (0,0,0)
    FONT (12,0,0,700,0,128,0,"Arial")
   }
-  LINE  1359, 0, 0
+  LINE  1395, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1170,1500), (1170,1260) )
    FILL (1,(0,0,0),0)
   }
-  LINE  1360, 0, 0
+  LINE  1396, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1170,1380), (2000,1380) )
    FILL (1,(0,0,0),0)
   }
-  LINE  1361, 0, 0
+  LINE  1397, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1170,1440), (2000,1440) )
    FILL (1,(0,0,0),0)
   }
-  LINE  1362, 0, 0
+  LINE  1398, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1300,1380), (1300,1500) )
   }
-  LINE  1363, 0, 0
+  LINE  1399, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1170,1260), (2000,1260) )
    FILL (1,(0,0,0),0)
   }
-  LINE  1364, 0, 0
+  LINE  1400, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (2000,1500), (2000,1260) )
    FILL (1,(0,0,0),0)
   }
-  LINE  1365, 0, 0
+  LINE  1401, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1170,1500), (2000,1500) )
    FILL (1,(0,0,0),0)
   }
-  TEXT  1366, 0, 0
+  TEXT  1402, 0, 0
   {
    PAGEALIGN 10
    TEXT "PCS-2307: Organização de Computadores"
@@ -586,19 +592,19 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  LINE  1367, 0, 0
+  LINE  1403, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1400,1260), (1400,1380) )
   }
-  LINE  1368, 0, 0
+  LINE  1404, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1860,1380), (1860,1440) )
   }
-  TEXT  1369, 0, 0
+  TEXT  1405, 0, 0
   {
    PAGEALIGN 10
    TEXT "Pagina:"
@@ -608,7 +614,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1370, 0, 0
+  TEXT  1406, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -620,13 +626,13 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  LINE  1371, 0, 0
+  LINE  1407, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 0,1, (128,128,128)
    POINTS ( (1700,1380), (1700,1440) )
   }
-  BMPPICT  1372, 0, 0
+  BMPPICT  1408, 0, 0
   {
    RECT (1180,1280,1380,1360)
    TEXT

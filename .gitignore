@@ -14,3 +14,5 @@ FemtoMIPS/FemtoMIPS/
 *.aws
 *.bak
 wave.*
+*.asm
+*.txt
