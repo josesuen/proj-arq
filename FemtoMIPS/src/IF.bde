@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 1801
+ FREEID 1909
  VARIABLES
  {
   #ARCHITECTURE="BI"
@@ -206,7 +206,7 @@ HEADER
     #LANGUAGE="VHDL"
     #MODIFIED="1466816392"
     #NAME="registradorCE"
-    #PRAGMED_GENERICS="NumeroBits"
+    #PRAGMED_GENERICS="NumeroBits;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="9dccfbdc-d6ea-4621-aae7-6ada8f60420c"
    }
   }
@@ -550,7 +550,7 @@ PAGE ""
     #COMPONENT="registradorCE"
     #CUSTOM_NAME=""
     #GENERIC0="NumeroBits : INTEGER := addr_len"
-    #GENERIC1="Tprop : TIME := 1 ns"
+    #GENERIC1="Tprop : TIME := 0 ns"
     #GENERIC2="Tsetup : TIME := 0 ns"
     #LIBRARY="#default"
     #NO_CONF="1"
@@ -595,6 +595,8 @@ PAGE ""
     #COMPONENT="multiplexador"
     #CUSTOM_NAME=""
     #GENERIC0="NumeroBits : integer := addr_len"
+    #GENERIC1="Tsel : time := 0 ns"
+    #GENERIC2="Tdata : time := 0 ns"
     #LIBRARY="biblioteca_de_componentes"
     #NO_CONF="1"
     #PRAGMED_GENERICS="NumeroBits;Tsel;Tdata"
@@ -726,6 +728,9 @@ PAGE ""
     #COMPONENT="somaQuatro"
     #CUSTOM_NAME=""
     #GENERIC0="NumeroBits : INTEGER := addr_len"
+    #GENERIC1="Tsoma : TIME := 0 ns"
+    #GENERIC2="Tinc : TIME := 0 ns"
+    #IMPL="somaquatro"
     #LIBRARY="#default"
     #NO_CONF="1"
     #PRAGMED_GENERICS="NumeroBits;Tsoma;Tinc"
@@ -1144,7 +1149,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  1784, 0, 0
+  TEXT  1892, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1155,7 +1160,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1785, 0, 0
+  TEXT  1893, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -1166,7 +1171,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  1786, 0, 0
+  TEXT  1894, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -1176,7 +1181,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1787, 0, 0
+  TEXT  1895, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1188,7 +1193,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  1788, 0, 0
+  TEXT  1896, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -1201,7 +1206,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  1789, 0, 0
+  TEXT  1897, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -1211,7 +1216,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1790, 0, 0
+  TEXT  1898, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -1223,7 +1228,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  1791, 0, 0
+  TEXT  1899, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -1233,7 +1238,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  1792, 0, 0
+  TEXT  1900, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -1244,7 +1249,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  1793, 0, 0
+  GROUP  1901, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1120,2001,1501)
@@ -1256,7 +1261,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  1794, 0, 0
+  GROUP  1902, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1320,2001,1321)
@@ -1268,7 +1273,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  1795, 0, 0
+  GROUP  1903, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1260,2001,1261)
@@ -1280,7 +1285,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  1796, 0, 0
+  GROUP  1904, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1380,2001,1381)
@@ -1292,7 +1297,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  1797, 0, 0
+  GROUP  1905, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1440,2001,1441)
@@ -1304,7 +1309,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  1798, 0, 0
+  GROUP  1906, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1120,1301,1261)
@@ -1315,7 +1320,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  1799, 0, 0
+  GROUP  1907, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1260,1301,1501)
@@ -1326,7 +1331,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  1800, 0, 0
+  BMPPICT  1908, 0, 0
   {
    PAGEALIGN 10
    RECT (1140,1180,1279,1225)
