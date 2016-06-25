@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 21328
+ FREEID 21345
  VARIABLES
  {
   #ARCHITECTURE="FemtoMIPS"
@@ -4440,7 +4440,12 @@ PAGE ""
    {
     #COMPONENT="MEM"
     #CUSTOM_NAME=""
+    #GENERIC0="Tz : TIME := 0 ns"
+    #GENERIC1="Twrite : TIME := 0 ns"
+    #GENERIC2="Tsetup : TIME := 0 ns"
+    #GENERIC3="Tread : TIME := 0 ns"
     #LIBRARY="#default"
+    #PRAGMED_GENERICS="NA;addr_len;word_len"
     #REFERENCE="U4"
     #SYMBOL="MEM"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="9a40119a-9781-4c29-96cf-5f179ad220bb"
@@ -4522,6 +4527,8 @@ PAGE ""
     #COMPONENT="multiplexador"
     #CUSTOM_NAME=""
     #GENERIC0="NumeroBits : integer := word_len"
+    #GENERIC1="Tsel : time := 0 ns"
+    #GENERIC2="Tdata : time := 0 ns"
     #LIBRARY="biblioteca_de_componentes"
     #NO_CONF="1"
     #PRAGMED_GENERICS="NumeroBits;Tsel;Tdata"
@@ -6031,7 +6038,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  21311, 0, 0
+  TEXT  21328, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -6042,7 +6049,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  21312, 0, 0
+  TEXT  21329, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -6053,7 +6060,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  21313, 0, 0
+  TEXT  21330, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -6063,7 +6070,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  21314, 0, 0
+  TEXT  21331, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -6075,7 +6082,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  21315, 0, 0
+  TEXT  21332, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -6088,7 +6095,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  21316, 0, 0
+  TEXT  21333, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -6098,7 +6105,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  21317, 0, 0
+  TEXT  21334, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -6110,7 +6117,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  21318, 0, 0
+  TEXT  21335, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -6120,7 +6127,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  21319, 0, 0
+  TEXT  21336, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -6131,7 +6138,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  21320, 0, 0
+  GROUP  21337, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4096,6415,4477)
@@ -6143,7 +6150,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  21321, 0, 0
+  GROUP  21338, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4296,6415,4297)
@@ -6155,7 +6162,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  21322, 0, 0
+  GROUP  21339, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4236,6415,4237)
@@ -6167,7 +6174,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  21323, 0, 0
+  GROUP  21340, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4356,6415,4357)
@@ -6179,7 +6186,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  21324, 0, 0
+  GROUP  21341, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4416,6415,4417)
@@ -6191,7 +6198,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  21325, 0, 0
+  GROUP  21342, 0, 0
   {
    PAGEALIGN 10
    RECT (5714,4096,5715,4237)
@@ -6202,7 +6209,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  21326, 0, 0
+  GROUP  21343, 0, 0
   {
    PAGEALIGN 10
    RECT (5714,4236,5715,4477)
@@ -6213,7 +6220,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  21327, 0, 0
+  BMPPICT  21344, 0, 0
   {
    PAGEALIGN 10
    RECT (5554,4156,5693,4201)

@@ -35,15 +35,15 @@ HEADER
     #CUSTOM_NAME=""
     #DESCRIPTION=""
     #GENERIC0="NumeroBits : INTEGER := 8"
-    #GENERIC1="Tprop : time := 1 ns"
-    #GENERIC2="Tsetup : time := 1 ns"
+    #GENERIC1="Tprop : time := 0 ns"
+    #GENERIC2="Tsetup : time := 0 ns"
     #HDL_ENTRIES=
 "library STD,IEEE;\n"+
 "use STD.STANDARD.all,ieee.std_logic_1164.all;"
     #LANGUAGE="VHDL"
     #MODIFIED="1466703451"
     #NAME="registrador"
-    #PRAGMED_GENERICS="NumeroBits;Tprop;Tsetup"
+    #PRAGMED_GENERICS="NumeroBits;Tprop;Tsetup;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="c986a9f8-9c95-4615-b406-ccb0b6c7c822"
    }
   }
