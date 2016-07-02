@@ -1,6 +1,4 @@
-#for i in range(0x200, 0x2a8, 4):
-#    print('{0:0>14b}'.format(i))
-with open('ld.bin') as file_in, open('ld.txt', 'w') as file_out:
+with open('jump.bin') as file_in, open('jump.txt', 'w') as file_out:
     i = 0x0000
     for line in file_in.readlines():
         file_out.write('{0:0>16b}{1}\n'.format(i, line[:-1]))
