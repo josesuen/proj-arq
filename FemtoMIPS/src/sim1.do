@@ -3,7 +3,7 @@
 #force -freeze {/FemtoMIPS/MemRead} 0
 #force -freeze {/FemtoMIPS/MemWrite} 0
 #force -freeze {/FemtoMIPS/MemtoReg} 0 0 ns, 1 72 ns, 0 82ns
-force -freeze {/FemtoMIPS/PCreset} 1 0 ns, 0 1ns
+#force -freeze {/FemtoMIPS/PCreset} 1 0 ns, 0 1ns
 #force -freeze {/FemtoMIPS/PCsrc} 0
 #force -freeze {/FemtoMIPS/RegDst} 0
 #force -freeze {/FemtoMIPS/RegWrite} 0 0 ns, 1 20 ns, 0 60ns
