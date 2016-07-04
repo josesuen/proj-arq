@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 26129
+ FREEID 26156
  VARIABLES
  {
   #ARCHITECTURE="FemtoMIPS"
@@ -13,37 +13,36 @@ HEADER
   #DEFAULT_RANGE2="<range<index=\"0\"><name=\"aluop_ex\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE3="<range<index=\"0\"><name=\"end_reg_dist_mem\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE4="<range<index=\"0\"><name=\"end_reg_dst\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE5="<range<index=\"0\"><name=\"end_reg_dst_mem\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE6="<range<index=\"0\"><name=\"forwarda\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE7="<range<index=\"0\"><name=\"forwardb\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE8="<range<index=\"0\"><name=\"ir\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE9="<range<index=\"0\"><name=\"irout_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE10="<range<index=\"0\"><name=\"lower_id\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE11="<range<index=\"0\"><name=\"lowerx_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE12="<range<index=\"0\"><name=\"lowerx_out\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE13="<range<index=\"0\"><name=\"opcode\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE14="<range<index=\"0\"><name=\"pc\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE15="<range<index=\"0\"><name=\"pc_ex\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE16="<range<index=\"0\"><name=\"pc_id\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE17="<range<index=\"0\"><name=\"pcjump\"><left=\"addr_len- 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE18="<range<index=\"0\"><name=\"rd\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE19="<range<index=\"0\"><name=\"rd_ex\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE20="<range<index=\"0\"><name=\"readdata\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE21="<range<index=\"0\"><name=\"resmemoria\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE22="<range<index=\"0\"><name=\"resula\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE23="<range<index=\"0\"><name=\"result_ex\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE24="<range<index=\"0\"><name=\"result_mem\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE25="<range<index=\"0\"><name=\"rs\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE26="<range<index=\"0\"><name=\"rs_ex\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE27="<range<index=\"0\"><name=\"rs_value_ex\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE28="<range<index=\"0\"><name=\"rs_value_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE29="<range<index=\"0\"><name=\"rt\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE30="<range<index=\"0\"><name=\"rt_ex\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE31="<range<index=\"0\"><name=\"rt_value_ex\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE32="<range<index=\"0\"><name=\"rt_value_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE33="<range<index=\"0\"><name=\"writedata\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE34="<range<index=\"0\"><name=\"writedata_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE35="<range<index=\"0\"><name=\"writeregister\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE5="<range<index=\"0\"><name=\"forwarda\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE6="<range<index=\"0\"><name=\"forwardb\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE7="<range<index=\"0\"><name=\"ir\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE8="<range<index=\"0\"><name=\"irout_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE9="<range<index=\"0\"><name=\"lower_id\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE10="<range<index=\"0\"><name=\"lowerx_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE11="<range<index=\"0\"><name=\"lowerx_out\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE12="<range<index=\"0\"><name=\"opcode\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE13="<range<index=\"0\"><name=\"pc\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE14="<range<index=\"0\"><name=\"pc_ex\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE15="<range<index=\"0\"><name=\"pc_id\"><left=\"addr_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE16="<range<index=\"0\"><name=\"pcjump\"><left=\"addr_len- 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE17="<range<index=\"0\"><name=\"rd\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE18="<range<index=\"0\"><name=\"rd_ex\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE19="<range<index=\"0\"><name=\"readdata\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE20="<range<index=\"0\"><name=\"resmemoria\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE21="<range<index=\"0\"><name=\"resula\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE22="<range<index=\"0\"><name=\"result_ex\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE23="<range<index=\"0\"><name=\"result_mem\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE24="<range<index=\"0\"><name=\"rs\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE25="<range<index=\"0\"><name=\"rs_ex\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE26="<range<index=\"0\"><name=\"rs_value_ex\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE27="<range<index=\"0\"><name=\"rs_value_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE28="<range<index=\"0\"><name=\"rt\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE29="<range<index=\"0\"><name=\"rt_ex\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE30="<range<index=\"0\"><name=\"rt_value_ex\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE31="<range<index=\"0\"><name=\"rt_value_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE32="<range<index=\"0\"><name=\"writedata\"><left=\"word_len-1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE33="<range<index=\"0\"><name=\"writedata_id\"><left=\"word_len - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE34="<range<index=\"0\"><name=\"writeregister\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #ENTITY="FemtoMIPS"
   #LANGUAGE="VHDL"
   AUTHOR="Gabriel"
@@ -511,7 +510,7 @@ HEADER
     TEXT  15, 0, 0
     {
      TEXT "$#NAME"
-     RECT (78,910,285,934)
+     RECT (78,890,285,914)
      ALIGN 6
      MARGINS (1,1)
      PARENT 14
@@ -728,7 +727,7 @@ HEADER
     }
     PIN  14, 0, 0
     {
-     COORD (300,920)
+     COORD (300,900)
      VARIABLES
      {
       #DIRECTION="OUT"
@@ -3226,7 +3225,7 @@ HEADER
     #GENERIC0="word_len : INTEGER := 32"
     #GENERIC1="addr_len : INTEGER := 16"
     #LANGUAGE="VHDL"
-    #MODIFIED="1466560114"
+    #MODIFIED="1467616043"
     #NAME="Fub5"
     #PRAGMED_GENERICS="word_len;addr_len;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="aade84df-cfce-45f7-8656-25b632a6ece4"
@@ -3294,7 +3293,7 @@ HEADER
     TEXT  13, 0, 0
     {
      TEXT "$#NAME"
-     RECT (-125,910,82,934)
+     RECT (-125,870,82,894)
      ALIGN 4
      MARGINS (1,1)
      PARENT 12
@@ -3440,7 +3439,7 @@ HEADER
     }
     PIN  12, 0, 0
     {
-     COORD (-140,920)
+     COORD (-140,880)
      VARIABLES
      {
       #DIRECTION="IN"
@@ -4869,7 +4868,7 @@ PAGE ""
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="12b79476-a4d8-4af9-b53a-5b3deda38c88"
    }
    COORD (4300,2080)
-   VERTEXES ( (52,25513), (25,25396), (23,25456), (21,25458), (19,25460), (6,25363), (36,25424), (46,25509), (12,25479), (2,25355), (27,25365), (32,25370), (34,25372), (10,25367), (8,25369), (38,25378), (14,25423), (54,25885), (49,25934) )
+   VERTEXES ( (52,25513), (25,25396), (23,25456), (21,25458), (19,25460), (6,25363), (36,25424), (46,25509), (12,25479), (2,25355), (27,25365), (32,25370), (34,25372), (10,25367), (8,25369), (38,25378), (54,25885), (49,25934), (14,26136) )
   }
   TEXT  19009, 0, 0
   {
@@ -4965,7 +4964,7 @@ PAGE ""
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="aade84df-cfce-45f7-8656-25b632a6ece4"
    }
    COORD (5680,2100)
-   VERTEXES ( (20,25371), (18,25373), (4,25375), (6,25380), (12,25422), (2,25360), (25,25376), (23,25389), (8,25391), (10,25393), (16,25350) )
+   VERTEXES ( (2,25360), (4,25375), (6,25380), (8,25391), (10,25393), (16,25350), (18,25373), (20,25371), (23,25389), (25,25376), (12,26137) )
   }
   TEXT  19522, 0, 0
   {
@@ -5046,9 +5045,9 @@ PAGE ""
   TEXT  19869, 0, 0
   {
    TEXT "$#NAME"
-   RECT (5013,2973,5268,3000)
+   RECT (5033,2953,5288,2980)
    ALIGN 9
-   PARENT 25659
+   PARENT 26138
   }
   NET BUS  19901, 0, 0
   {
@@ -5393,17 +5392,10 @@ PAGE ""
    ALIGN 9
    PARENT 25627
   }
-  NET BUS  23193, 0, 0
-  {
-   VARIABLES
-   {
-    #NAME="end_reg_dst_mem(2:0)"
-   }
-  }
   TEXT  23194, 0, 0
   {
    TEXT "$#NAME"
-   RECT (2055,2033,2305,2060)
+   RECT (2053,2033,2308,2060)
    ALIGN 9
    PARENT 25645
   }
@@ -5920,14 +5912,6 @@ PAGE ""
   VTX  25421, 0, 0
   {
    COORD (2320,1900)
-  }
-  VTX  25422, 0, 0
-  {
-   COORD (5540,3020)
-  }
-  VTX  25423, 0, 0
-  {
-   COORD (4600,3000)
   }
   VTX  25424, 0, 0
   {
@@ -6846,7 +6830,7 @@ PAGE ""
   }
   BUS  25645, 0, 0
   {
-   NET 23193
+   NET 19868
    VTX 25415, 25416
   }
   WIRE  25646, 0, 0
@@ -6890,29 +6874,6 @@ PAGE ""
   {
    NET 21907
    VTX 25652, 25421
-  }
-  VTX  25655, 0, 0
-  {
-   COORD (5300,3020)
-  }
-  BUS  25656, 0, 0
-  {
-   NET 19868
-   VTX 25422, 25655
-  }
-  VTX  25657, 0, 0
-  {
-   COORD (5300,3000)
-  }
-  BUS  25658, 0, 0
-  {
-   NET 19868
-   VTX 25655, 25657
-  }
-  BUS  25659, 0, 0
-  {
-   NET 19868
-   VTX 25657, 25423
   }
   BUS  25660, 0, 0
   {
@@ -7885,6 +7846,19 @@ PAGE ""
    MARGINS (1,1)
    PARENT 26072
   }
+  VTX  26136, 0, 0
+  {
+   COORD (4600,2980)
+  }
+  VTX  26137, 0, 0
+  {
+   COORD (5540,2980)
+  }
+  BUS  26138, 0, 0
+  {
+   NET 19868
+   VTX 26136, 26137
+  }
  }
  
 }
@@ -7910,7 +7884,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  26112, 0, 0
+  TEXT  26139, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -7921,7 +7895,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  26113, 0, 0
+  TEXT  26140, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -7932,7 +7906,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  26114, 0, 0
+  TEXT  26141, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -7942,7 +7916,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  26115, 0, 0
+  TEXT  26142, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -7954,7 +7928,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  26116, 0, 0
+  TEXT  26143, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -7967,7 +7941,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  26117, 0, 0
+  TEXT  26144, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -7977,7 +7951,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  26118, 0, 0
+  TEXT  26145, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -7989,7 +7963,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  26119, 0, 0
+  TEXT  26146, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -7999,7 +7973,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  26120, 0, 0
+  TEXT  26147, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -8010,7 +7984,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  26121, 0, 0
+  GROUP  26148, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4096,6415,4477)
@@ -8022,7 +7996,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  26122, 0, 0
+  GROUP  26149, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4296,6415,4297)
@@ -8034,7 +8008,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  26123, 0, 0
+  GROUP  26150, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4236,6415,4237)
@@ -8046,7 +8020,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  26124, 0, 0
+  GROUP  26151, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4356,6415,4357)
@@ -8058,7 +8032,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  26125, 0, 0
+  GROUP  26152, 0, 0
   {
    PAGEALIGN 10
    RECT (5534,4416,6415,4417)
@@ -8070,7 +8044,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  26126, 0, 0
+  GROUP  26153, 0, 0
   {
    PAGEALIGN 10
    RECT (5714,4096,5715,4237)
@@ -8081,7 +8055,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  26127, 0, 0
+  GROUP  26154, 0, 0
   {
    PAGEALIGN 10
    RECT (5714,4236,5715,4477)
@@ -8092,7 +8066,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  26128, 0, 0
+  BMPPICT  26155, 0, 0
   {
    PAGEALIGN 10
    RECT (5554,4156,5693,4201)
