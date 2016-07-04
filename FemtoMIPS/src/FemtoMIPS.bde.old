@@ -223,8 +223,8 @@ HEADER
    {
     #CUSTOM_NAME=""
     #DESCRIPTION=""
-    #GENERIC0="word_len : INTEGER := 32"
-    #GENERIC1="addr_len : INTEGER := 16"
+    #GENERIC0="word_len : integer := 32"
+    #GENERIC1="addr_len : integer := 16"
     #HDL_ENTRIES=
 "library STD,IEEE;\n"+
 "use std.standard.all,ieee.std_logic_1164.all;"

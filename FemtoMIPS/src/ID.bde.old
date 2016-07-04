@@ -32,8 +32,8 @@ HEADER
    {
     #CUSTOM_NAME=""
     #DESCRIPTION=""
-    #GENERIC0="NBend : integer := 3"
-    #GENERIC1="NBdado : integer := 16"
+    #GENERIC0="NBend : integer := 4"
+    #GENERIC1="NBdado : integer := 8"
     #GENERIC2="Tread : time := 5 ns"
     #GENERIC3="Twrite : time := 5 ns"
     #HDL_ENTRIES=
@@ -42,7 +42,7 @@ HEADER
     #LANGUAGE="VHDL"
     #MODIFIED="1466566421"
     #NAME="dualregfile"
-    #PRAGMED_GENERICS="NBend;NBdado;Tread;Twrite;"
+    #PRAGMED_GENERICS="Tread;Twrite;NBend;NBdado"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="7580212b-dfc8-4ed6-b9fe-0b2f3518366d"
    }
   }

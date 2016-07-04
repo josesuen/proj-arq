@@ -35,15 +35,15 @@ HEADER
    {
     #CUSTOM_NAME=""
     #DESCRIPTION=""
-    #GENERIC0="word_len : integer := 32"
-    #GENERIC1="addr_len : integer := 16"
+    #GENERIC0="word_len : INTEGER := 32"
+    #GENERIC1="addr_len : INTEGER := 16"
     #HDL_ENTRIES=
 "library STD,IEEE;\n"+
 "use std.standard.all,ieee.std_logic_1164.all;"
     #LANGUAGE="VHDL"
     #MODIFIED="1466602566"
     #NAME="BI"
-    #PRAGMED_GENERICS="addr_len;word_len"
+    #PRAGMED_GENERICS="word_len;addr_len;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="f82a01f1-dc08-4df0-b18b-e5d74e6df6c6"
    }
   }
@@ -263,7 +263,7 @@ HEADER
     #LANGUAGE="VHDL"
     #MODIFIED="1466602001"
     #NAME="Fub4"
-    #PRAGMED_GENERICS="addr_len;word_len"
+    #PRAGMED_GENERICS="word_len;addr_len;"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
    }
   }
@@ -1266,9 +1266,11 @@ PAGE ""
    VARIABLES
    {
     #COMPONENT="BusOutput"
+    #CUSTOM_NAME=""
     #LIBRARY="#terminals"
     #REFERENCE="opcode(5:0)"
     #SYMBOL="BusOutput"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
    }
    COORD (2760,1240)
    VERTEXES ( (2,546) )

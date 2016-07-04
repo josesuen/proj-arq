@@ -59,8 +59,7 @@ entity DATA_TAG is
 		 wD : out STD_LOGIC_VECTOR(31 downto 0);
 		 wE : out STD_LOGIC_VECTOR(31 downto 0);
 		 wF : out STD_LOGIC_VECTOR(31 downto 0);
-		 datain : in STD_LOGIC_VECTOR(511 downto 0);
-		 
+		 datain : in STD_LOGIC_VECTOR(511 downto 0);		 
 		 wren : in std_logic;
 		 clk : in std_logic
 	     );
