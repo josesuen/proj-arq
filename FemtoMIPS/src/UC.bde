@@ -2,7 +2,7 @@ SCHM0106
 
 HEADER
 {
- FREEID 4935
+ FREEID 4961
  VARIABLES
  {
   #ARCHITECTURE="UC"
@@ -1880,21 +1880,127 @@ PAGE ""
 "-- Section above this comment may be overwritten according to\n"+
 "-- \"Update sensitivity list automatically\" option status\n"+
 "-- declarations\n"+
+"\n"+
+"\tvariable JMP : STD_LOGIC := '0';\n"+
+"\tvariable Bubble : STD_LOGIC;\n"+
+"\n"+
 "begin\n"+
 "-- statements\n"+
 "if clk'event and clk='1' then\n"+
+"\n"+
+"\tPCceprox <= '1';\n"+
+"\tIF_ID_ce <= '1';\n"+
+"\tPCce <= '1';\n"+
+"\tFlush_IF_ID <= '0';\n"+
+"\tPCsrc <= '0';\n"+
+"\tresetSinc <= '0';\n"+
+"\tBubble := '0';\n"+
+"\n"+
+"\t\n"+
+"\t-- Sinais de CONTROLE default\n"+
+"\tALUop <= \"00\";\n"+
+"\tALUsrc <= '0';\n"+
+"\tRegDst <= '0';\n"+
+"\tBranch <= '0';\n"+
+"\tMemRead <= '0';\n"+
+"\tMemWrite <= '0';\n"+
+"\tMemtoReg <= '0';\n"+
+"\tRegWrite <= '0';\n"+
+"\t-- Sinais de FORWARDING\n"+
+"\tForwardA <= \"00\";\n"+
+"\tForwardB <= \"00\";\n"+
+"\t\n"+
+"\t\n"+
 "\tcase S is\n"+
 "\t\t-- Estado de INICIALIZAÇÃO\n"+
-"\t\twhen \"00000000\" =>\n"+
+"\t\twhen \"00000000\" =>\t\n"+
+"\t\t\tresetSinc <= '1';\n"+
 "\t\t\tS_in <= \"00000001\";\n"+
 "\t\t\n"+
 "\t\t-- Estado de OPERAÇÃO NORMAL\n"+
 "\t\twhen \"00000001\" =>\n"+
-"\t\t\n"+
-"\t\t\tPCceprox <= '1';\n"+
-"\t\t\tIF_ID_ce <= '1';\n"+
-"\t\t\tFlush_IF_ID <= '0';\n"+
-"\t\t\tPCsrc <= '0';\n"+
+"\t\t\t\n"+
+"\t\t\t-- HAZARD DETECTION UNIT\n"+
+"\t\t\tif MemRead_ex='1' and\n"+
+"\t\t   \t   (rt_ex=rs_id or rt_ex=rt_id) then \n"+
+"\t\t\t\t\tBubble := '1';\n"+
+"\t\t\t\t\tPCcehazard <= '0';\t\n"+
+"\t\t\tend if;\n"+
+"\t\t\t\n"+
+"\t\t\t-- DECODIFICAÇÃO\n"+
+"\t\t\tif Bubble='0' then\n"+
+"\t\t\t\tcase opcode is\n"+
+"\t\t\t\t\t-- instrucoes do tipo R\n"+
+"\t\t\t\t\twhen \"000000\" =>\n"+
+"\t\t\t\t\t\tALUop <= \"10\";\n"+
+"\t\t\t\t\t\tRegWrite <= '1';\n"+
+"\t\t\t\t\t\tRegDst <= '1';\n"+
+"\t\t\t\n"+
+"\t\t\t\t\t-- instrucoes do tipo I\n"+
+"\t\t\t\t\twhen \"001000\" => -- addi\n"+
+"\t\t\t\t\t\tALUop <= \"00\";\n"+
+"\t\t\t\t\t\tALUsrc <= '1';\n"+
+"\t\t\t\t\t\tRegWrite <= '1';\n"+
+"\t\t\t\t\twhen \"001010\" => -- slti\n"+
+"\t\t\t\t\t\tALUop    <= \"01\";\n"+
+"\t\t\t\t\t\tRegDst   <= '1';\n"+
+"\t\t\t\t\twhen \"101011\" => -- sw\n"+
+"\t\t\t\t\t\tALUop <= \"00\";\n"+
+"\t\t\t\t\t\tALUsrc <= '1';\n"+
+"\t\t\t\t\t\tMemRead\t <= '0';\n"+
+"\t\t\t\t\t\tMemWrite <= '1';\n"+
+"\t\t\t\t\twhen \"100011\" => -- lw\n"+
+"\t\t\t\t\t\tALUop <= \"00\";\n"+
+"\t\t\t\t\t\tALUsrc <= '1';\n"+
+"\t\t\t\t\t\tRegWrite <= '1';\n"+
+"\t\t\t\t\t\tMemRead\t <= '1';\n"+
+"\t\t\t\t\t\tMemWrite <= '0';\n"+
+"\t\t\t\t\t\tMemtoReg <= '1';\n"+
+"\t\t\t\t\twhen \"000100\" => -- beq\n"+
+"\t\t\t\t\t\tALUop <= \"01\";\n"+
+"\t\t\t\t\t\tBranch <= '1';\n"+
+"\t\t\t\t\t\n"+
+"\t\t\t\t\t-- instrucoes do tipo J\n"+
+"\t\t\t\t\twhen \"000010\" => -- jump\n"+
+"\t\t\t\t\t\t--Flush <= '1';\n"+
+"\t\t\t\t\t\t--PCsrc <= '1';\n"+
+"\t\t\t\t\t\tJMP := '1';\n"+
+"\t\t\t\t\twhen \"000101\" => --\tbne\t\n"+
+"\t\t\t\t\t\tALUop <= \"01\";\n"+
+"\t\t\t\t\t\t-- ALUsrc <= ;\n"+
+"\t\t\t\t\t\t-- RegWrite <= ;\n"+
+"\t\t\t\t\t\t-- RegDst <= ;\n"+
+"\t\t\t\t\t\t-- MemReadWrite <= ;\n"+
+"\t\t\t\t\t\t-- MemtoReg <= ;\n"+
+"\t\t\t\t\twhen \"000011\" => -- jal\n"+
+"\t\t\t\t\t\t-- ALUop <= \"11\";\n"+
+"\t\t\t\t\t\t-- ALUsrc <= ;\n"+
+"\t\t\t\t\t\t-- RegWrite <= ;\n"+
+"\t\t\t\t\t\t-- RegDst <= ;\n"+
+"\t\t\t\t\t\t-- MemReadWrite <= ;\n"+
+"\t\t\t\t\t\t-- MemtoReg <= ;\n"+
+"\t\t\t\t\t\tNull;\n"+
+"\t\t\t\t\t\n"+
+"\t\t\t\t\twhen others => Null;\n"+
+"\t\t\t\tend case;\n"+
+"\t\t\tend if;\n"+
+"\t\t\t\n"+
+"\t\t\t-- FORWARDING UNIT\n"+
+"\t\t\tif RegWrite_mem='1'\n"+
+"\t\t\t\tand end_reg_dst_mem/=\"000\" then\n"+
+"\t\t\t\t\tif end_reg_dst_mem = rs_ex then\n"+
+"\t\t\t\t\t\tForwardA <= \"10\";\n"+
+"\t\t\t\t\telsif end_reg_dst_mem = rt_ex then\n"+
+"\t\t\t\t\t\tForwardB <= \"10\";\n"+
+"\t\t\t\t\tend if;\n"+
+"\t\t\telsif RegWrite_wb='1'\n"+
+"\t\t\t\tand WriteRegister/=\"000\" then\n"+
+"\t\t\t\t\tif WriteRegister=rs_ex then\n"+
+"\t\t\t\t\t\tForwardA <= \"01\";\n"+
+"\t\t\t\t\telsif WriteRegister=rt_ex then\n"+
+"\t\t\t\t\t\tForwardB <= \"01\";\n"+
+"\t\t\t\t\tend if;\t\t\t\n"+
+"\t\t\tend if;\n"+
 "\t\t\n"+
 "\t\t\tS_in <= \"00000001\";\n"+
 "\t\t\n"+
@@ -1922,7 +2028,7 @@ PAGE ""
    SYNTAXCOLORED
    SHOWLABEL
    CORNER 10
-   VTX (  4192, 4335, 4339, 4462, 4546, 4826, 4834, 4845, 4860, 4862 )
+   VTX (  4192, 4335, 4339, 4462, 4546, 4826, 4834, 4845, 4860, 4862, 4941 )
    VARIABLES
    {
     #DIRECTION_LIST="4192 4834 4845 4860 4862 "
@@ -2599,6 +2705,42 @@ PAGE ""
    NET 2552
    VTX 4907, 4908
   }
+  NET WIRE  4937, 0, 0
+  INSTANCE  4939, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="resetSinc"
+    #SYMBOL="Output"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (1540,2060)
+   VERTEXES ( (2,4942) )
+  }
+  TEXT  4940, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (1592,2043,1716,2078)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 4939
+  }
+  VTX  4941, 0, 0
+  {
+   COORD (1280,2060)
+  }
+  VTX  4942, 0, 0
+  {
+   COORD (1540,2060)
+  }
+  WIRE  4943, 0, 0
+  {
+   NET 4937
+   VTX 4941, 4942
+  }
  }
  
 }
@@ -2624,7 +2766,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  4918, 0, 0
+  TEXT  4944, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -2635,7 +2777,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  4919, 0, 0
+  TEXT  4945, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -2646,7 +2788,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  4920, 0, 0
+  TEXT  4946, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -2656,7 +2798,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  4921, 0, 0
+  TEXT  4947, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -2668,7 +2810,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  4922, 0, 0
+  TEXT  4948, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -2681,7 +2823,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  4923, 0, 0
+  TEXT  4949, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -2691,7 +2833,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  4924, 0, 0
+  TEXT  4950, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -2703,7 +2845,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  4925, 0, 0
+  TEXT  4951, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -2713,7 +2855,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  4926, 0, 0
+  TEXT  4952, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -2724,7 +2866,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  4927, 0, 0
+  GROUP  4953, 0, 0
   {
    PAGEALIGN 10
    RECT (3596,2727,4477,3108)
@@ -2736,7 +2878,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  4928, 0, 0
+  GROUP  4954, 0, 0
   {
    PAGEALIGN 10
    RECT (3596,2927,4477,2928)
@@ -2748,7 +2890,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  4929, 0, 0
+  GROUP  4955, 0, 0
   {
    PAGEALIGN 10
    RECT (3596,2867,4477,2868)
@@ -2760,7 +2902,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  4930, 0, 0
+  GROUP  4956, 0, 0
   {
    PAGEALIGN 10
    RECT (3596,2987,4477,2988)
@@ -2772,7 +2914,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  4931, 0, 0
+  GROUP  4957, 0, 0
   {
    PAGEALIGN 10
    RECT (3596,3047,4477,3048)
@@ -2784,7 +2926,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  4932, 0, 0
+  GROUP  4958, 0, 0
   {
    PAGEALIGN 10
    RECT (3776,2727,3777,2868)
@@ -2795,7 +2937,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  4933, 0, 0
+  GROUP  4959, 0, 0
   {
    PAGEALIGN 10
    RECT (3776,2867,3777,3108)
@@ -2806,7 +2948,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  4934, 0, 0
+  BMPPICT  4960, 0, 0
   {
    PAGEALIGN 10
    RECT (3616,2787,3755,2832)
