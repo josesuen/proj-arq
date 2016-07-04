@@ -3,10 +3,12 @@ with open('jump.bin') as file_in, open('jump.txt', 'w') as file_out:
     for line in file_in.readlines():
         file_out.write('{0:0>16b}{1}\n'.format(i, line[:-1]))
         i += 4
-#with open('data.txt', 'w') as file_out:
-#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x0, 0x7))
-#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x4, 0xC))
-#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x4, 0x5))
+##with open('data.txt', 'w') as file_out:
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x0, 0x7))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x4, 0x6))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x8, 0x5))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0xC, 0x4))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x10,0x3))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2000, 9))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2004, 6))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2008, 1))
