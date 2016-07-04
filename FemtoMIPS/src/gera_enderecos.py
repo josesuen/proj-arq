@@ -1,4 +1,4 @@
-with open('jump.bin') as file_in, open('jump.txt', 'w') as file_out:
+with open('sll.bin') as file_in, open('sll.txt', 'w') as file_out:
     i = 0x0000
     for line in file_in.readlines():
         file_out.write('{0:0>16b}{1}\n'.format(i, line[:-1]))
