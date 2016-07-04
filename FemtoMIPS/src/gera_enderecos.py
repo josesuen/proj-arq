@@ -1,12 +1,14 @@
-#for i in range(0x200, 0x2a8, 4):
-#    print('{0:0>14b}'.format(i))
-with open('ld.bin') as file_in, open('ld.txt', 'w') as file_out:
+with open('jump.bin') as file_in, open('jump.txt', 'w') as file_out:
     i = 0x0000
     for line in file_in.readlines():
         file_out.write('{0:0>16b}{1}\n'.format(i, line[:-1]))
         i += 4
-#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x0, 7))
-#    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x4, 13))
+##with open('data.txt', 'w') as file_out:
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x0, 0x7))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x4, 0x6))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x8, 0x5))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0xC, 0x4))
+##    file_out.write("{0:0>16b}{1:0>32b}\n".format(0x10,0x3))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2000, 9))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2004, 6))
 #    file_out.write('{0:0>32b}{1:0>32b}\n'.format(0x2008, 1))

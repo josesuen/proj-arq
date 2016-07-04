@@ -2,22 +2,226 @@ SCHM0106
 
 HEADER
 {
- FREEID 229
+ FREEID 52
  VARIABLES
  {
-  #ARCHITECTURE="ALUcontrol"
+  #ARCHITECTURE="RegistradorEstado"
   #BLOCKTABLE_FILE="#table.bde"
   #BLOCKTABLE_INCLUDED="1"
-  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"aluop\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"cula\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE2="<range<index=\"0\"><name=\"funct\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #ENTITY="ALUcontrol"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"s\"><left=\"7\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"s_in\"><left=\"7\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #ENTITY="RegistradorEstado"
   #LANGUAGE="VHDL"
   AUTHOR="gabriel.casarin@hotmail.com"
   COMPANY="USP"
-  CREATIONDATE="6/19/2016"
+  CREATIONDATE="7/3/2016"
   PAGECOUNT="2"
-  TITLE="ALUcontrol"
+  TITLE="RegistradorEstado"
+ }
+ SYMBOL "#default" "registradorCE" "registradorCE"
+ {
+  HEADER
+  {
+   VARIABLES
+   {
+    #CUSTOM_NAME=""
+    #DESCRIPTION=""
+    #GENERIC0="NumeroBits : INTEGER := 8"
+    #GENERIC1="Tprop : TIME := 0 ns"
+    #GENERIC2="Tsetup : TIME := 0 ns"
+    #HDL_ENTRIES=
+"library STD,IEEE;\n"+
+"use std.standard.all,ieee.std_logic_1164.all;"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1466816392"
+    #NAME="registradorCE"
+    #PRAGMED_GENERICS="NumeroBits"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="9dccfbdc-d6ea-4621-aae7-6ada8f60420c"
+   }
+  }
+  PAGE "" 
+  {
+   PAGEHEADER
+   {
+    RECT (0,20,160,220)
+    FREEID 18
+   }
+   
+   BODY
+   {
+    RECT  1, -1, 0
+    {
+     VARIABLES
+     {
+      #OUTLINE_FILLING="1"
+     }
+     AREA (20,20,140,200)
+    }
+    TEXT  3, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (109,176,125,200)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 2
+     ORIENTATION 4
+    }
+    TEXT  5, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (118,50,135,74)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 4
+    }
+    TEXT  7, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (75,176,90,200)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 6
+     ORIENTATION 3
+    }
+    TEXT  9, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,110,48,134)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 8
+    }
+    TEXT  13, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,50,41,74)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 12
+    }
+    TEXT  17, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (34,148,59,172)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 16
+    }
+    PIN  2, 0, 0
+    {
+     COORD (120,220)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="R"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,1, (0,0,255)
+      POINTS ( (0,0), (0,-20) )
+      FILL (1,(0,0,0),0)
+     }
+    }
+    PIN  4, 0, 0
+    {
+     COORD (160,60)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #IS_UNCONSTRAINED_PORT="1"
+      #LENGTH="20"
+      #NAME="Q"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,3, (128,0,0)
+      POINTS ( (-20,0), (0,0) )
+      FILL (1,(0,0,0),0)
+     }
+    }
+    PIN  6, 0, 0
+    {
+     COORD (80,220)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="S"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,1, (0,0,255)
+      POINTS ( (0,0), (0,-20) )
+      FILL (1,(0,0,0),0)
+     }
+    }
+    PIN  8, 0, 0
+    {
+     COORD (0,120)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="ce"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,1, (0,0,255)
+      POINTS ( (0,0), (20,0) )
+      FILL (1,(0,0,0),0)
+     }
+    }
+    PIN  12, 0, 0
+    {
+     COORD (0,60)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #IS_UNCONSTRAINED_PORT="1"
+      #LENGTH="20"
+      #NAME="D"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,3, (128,0,0)
+      POINTS ( (0,0), (20,0) )
+      FILL (1,(0,0,0),0)
+     }
+    }
+    PIN  16, 0, 0
+    {
+     COORD (0,160)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LABEL="CLK"
+      #LENGTH="20"
+      #MODIFIED=""
+      #NAME="clk"
+      #NUMBER="1"
+      #SIDE="left"
+     }
+     LINE  1, 0, 0
+     {
+      OUTLINE 0,1, (0,0,255)
+      POINTS ( (0,0), (20,0) )
+      FILL (1,(0,0,0),0)
+     }
+     LINE  2, 0, 0
+     {
+      OUTLINE 0,1, (0,0,255)
+      POINTS ( (20,0), (20,-10), (30,0), (20,10), (20,0) )
+      FILL (1,(0,0,0),0)
+     }
+    }
+   }
+  }
  }
 }
 
@@ -40,17 +244,17 @@ PAGE ""
     #CUSTOM_NAME=""
     #DOWNTO="1"
     #LIBRARY="#terminals"
-    #REFERENCE="funct(5:0)"
+    #REFERENCE="S_in(7:0)"
     #SYMBOL="BusInput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
    }
-   COORD (580,700)
-   VERTEXES ( (2,150) )
+   COORD (440,460)
+   VERTEXES ( (2,12) )
   }
   TEXT  2, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (400,684,525,719)
+   RECT (265,444,385,479)
    ALIGN 2
    MARGINS (1,1)
    COLOR (0,0,192)
@@ -60,22 +264,21 @@ PAGE ""
   {
    VARIABLES
    {
-    #COMPONENT="BusInput"
+    #COMPONENT="BusOutput"
     #CUSTOM_NAME=""
     #DOWNTO="1"
     #LIBRARY="#terminals"
-    #REFERENCE="ALUop(1:0)"
-    #SYMBOL="BusInput"
+    #REFERENCE="S(7:0)"
+    #SYMBOL="BusOutput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
    }
-   COORD (580,860)
-   VERTEXES ( (2,152) )
+   COORD (880,460)
+   VERTEXES ( (2,8) )
   }
   TEXT  4, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (375,844,525,879)
-   ALIGN 2
+   RECT (935,444,1016,479)
    MARGINS (1,1)
    COLOR (0,0,192)
    PARENT 3
@@ -84,171 +287,151 @@ PAGE ""
   {
    VARIABLES
    {
-    #COMPONENT="BusOutput"
+    #COMPONENT="registradorCE"
     #CUSTOM_NAME=""
-    #DOWNTO="1"
-    #LIBRARY="#terminals"
-    #REFERENCE="cULA(2:0)"
-    #SYMBOL="BusOutput"
-    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+    #LIBRARY="#default"
+    #REFERENCE="U1"
+    #SYMBOL="registradorCE"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="9dccfbdc-d6ea-4621-aae7-6ada8f60420c"
    }
-   COORD (1520,780)
-   VERTEXES ( (2,149) )
+   COORD (580,400)
+   VERTEXES ( (4,9), (12,13), (16,19), (8,30) )
   }
   TEXT  6, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (1575,764,1708,799)
+   RECT (580,384,619,419)
+   ALIGN 8
    MARGINS (1,1)
-   COLOR (0,0,192)
    PARENT 5
   }
-  PROCESS  7, 0, 0
+  TEXT  7, 0, 0
   {
-   LABEL "ALUcontrol"
-   TEXT 
-"ALUcontrol :\n"+
-"process(ALUop, funct)\n"+
-"-- Section above this comment may be overwritten according to\n"+
-"-- \"Update sensitivity list automatically\" option status\n"+
-"-- declarations\n"+
-"begin\n"+
-"-- statements\n"+
-"\tcase ALUop is\n"+
-"\t\twhen \"00\" =>\n"+
-"\t\t\t-- LOAD ou STORE\n"+
-"\t\t\tcULA <= \"001\"; -- SOMA (ou ADDi)\n"+
-"\t\t\n"+
-"\t\twhen \"01\" =>  -- BEQ\n"+
-"\t\t\tcULA <= \"011\"; -- SUBTRACAO\t(ou SUBi)\n"+
-"\t\t\n"+
-"\t\twhen \"10\" =>\n"+
-"\t\t\tcase funct is\n"+
-"\t\t\t\twhen \"100000\" => -- add\n"+
-"\t\t\t\t\tcULA <= \"001\";\n"+
-"\t\t\t\twhen \"100010\" => -- subtract\n"+
-"\t\t\t\t\tcULA <= \"011\";\n"+
-"\t\t\t\twhen \"100100\" => -- AND\n"+
-"\t\t\t\t\tcULA <= \"100\";\n"+
-"\t\t\t\twhen \"100101\" => -- OR\n"+
-"\t\t\t\t\tcULA <= \"101\";\n"+
-"\t\t\t\twhen \"101010\" => -- set on less than\n"+
-"\t\t\t\t\tcULA <= \"011\";\n"+
-"\t\t\t\t--when \"000000\" => -- sll\n"+
-"\t\t\t\t--\tcULA <= \"111\";\t\t\t\t\t\t\t\n"+
-"\t\t\t\twhen \"100001\" => -- addu\n"+
-"\t\t\t\t\tcULA <= \"001\";\n"+
-"\t\t\t\twhen \"001000\" =>\n"+
-"\t\t\t\t\tcULA <= \"001\";\n"+
-"\t\t\t\twhen others => Null;\n"+
-"\t\t\tend case;\n"+
-"\t\twhen others => Null;\n"+
-"\tend case;\n"+
-"end process ALUcontrol;\n"+
-"\n"+
-"\n"+
-"\n"+
-""
-   RECT (840,600,1280,980)
-   ALIGN 5
-   MARGINS (20,20)
-   FONT (18,0,0,400,0,0,0,"Arial")
-   MULTILINE
-   SYNTAXCOLORED
-   SHOWLABEL
-   CORNER 10
-   VTX (  148, 151, 153 )
-   VARIABLES
-   {
-    #DIRECTION_LIST="151 153 "
-    #UPDATE_SENS_LIST="0"
-   }
-   LIST (  151, 153 )
-  }
-  NET BUS  8, 0, 0
-  {
-   VARIABLES
-   {
-    #NAME="funct(5:0)"
-   }
-  }
-  NET BUS  12, 0, 0
-  {
-   VARIABLES
-   {
-    #NAME="ALUop(1:0)"
-   }
-  }
-  NET BUS  42, 0, 0
-  {
-   VARIABLES
-   {
-    #NAME="cULA(2:0)"
-   }
-  }
-  VHDLDESIGNUNITHDR  147, 0, 0
-  {
-   LABEL "Design Unit Header"
-   TEXT 
-"library IEEE;\n"+
-"use IEEE.std_logic_1164.all;\n"+
-"use IEEE.std_logic_arith.all;\n"+
-"use IEEE.std_logic_signed.all;\n"+
-"use IEEE.std_logic_unsigned.all;"
-   RECT (200,200,700,440)
-   MARGINS (20,20)
-   MULTILINE
-   SYNTAXCOLORED
-   SHOWLABEL
-   SHOWTEXT
-   CORNER 10
-  }
-  VTX  148, 0, 0
-  {
-   COORD (1280,780)
-  }
-  VTX  149, 0, 0
-  {
-   COORD (1520,780)
-  }
-  VTX  150, 0, 0
-  {
-   COORD (580,700)
-  }
-  VTX  151, 0, 0
-  {
-   COORD (840,700)
-  }
-  VTX  152, 0, 0
-  {
-   COORD (580,860)
-  }
-  VTX  153, 0, 0
-  {
-   COORD (840,860)
-  }
-  BUS  154, 0, 0
-  {
-   NET 42
-   VTX 148, 149
-  }
-  BUS  155, 0, 0
-  {
-   NET 8
-   VTX 150, 151
-  }
-  BUS  156, 0, 0
-  {
-   NET 12
-   VTX 152, 153
-  }
-  TEXT  160, 0, 0
-  {
-   TEXT "ALU control"
-   RECT (800,340,1295,442)
+   TEXT "$#COMPONENT"
+   RECT (580,621,762,656)
    MARGINS (1,1)
-   COLOR (0,0,0)
-   FONT (36,0,0,700,0,0,0,"Arial")
+   PARENT 5
+  }
+  VTX  8, 0, 0
+  {
+   COORD (880,460)
+  }
+  VTX  9, 0, 0
+  {
+   COORD (740,460)
+  }
+  NET BUS  10, 0, 0
+  {
+   VARIABLES
+   {
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  BUS  11, 0, 0
+  {
+   NET 10
+   VTX 8, 9
+  }
+  VTX  12, 0, 0
+  {
+   COORD (440,460)
+  }
+  VTX  13, 0, 0
+  {
+   COORD (580,460)
+  }
+  NET BUS  14, 0, 0
+  {
+   VARIABLES
+   {
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  BUS  15, 0, 0
+  {
+   NET 14
+   VTX 12, 13
+  }
+  INSTANCE  16, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="clk"
+    #SYMBOL="Input"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (440,560)
+   VERTEXES ( (2,18) )
+  }
+  TEXT  17, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (351,543,389,578)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 16
+  }
+  VTX  18, 0, 0
+  {
+   COORD (440,560)
+  }
+  VTX  19, 0, 0
+  {
+   COORD (580,560)
+  }
+  NET WIRE  20, 0, 0
+  WIRE  21, 0, 0
+  {
+   NET 20
+   VTX 18, 19
+  }
+  INSTANCE  22, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Power"
+    #CUSTOM_NAME=""
+    #LIBRARY="#connectors"
+    #REFERENCE="VCC"
+    #SYMBOL="Power"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+   }
+   COORD (520,260)
+   VERTEXES ( (2,31) )
+  }
+  TEXT  23, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (531,213,594,248)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 22
+  }
+  NET WIRE  26, 0, 0
+  VTX  30, 0, 0
+  {
+   COORD (580,520)
+  }
+  VTX  31, 0, 0
+  {
+   COORD (520,260)
+  }
+  VTX  32, 0, 0
+  {
+   COORD (520,520)
+  }
+  WIRE  33, 0, 0
+  {
+   NET 26
+   VTX 30, 32
+  }
+  WIRE  34, 0, 0
+  {
+   NET 26
+   VTX 32, 31
   }
  }
  
@@ -275,7 +458,7 @@ PAGE ""
  
  BODY
  {
-  TEXT  212, 0, 0
+  TEXT  35, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -286,7 +469,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  213, 0, 0
+  TEXT  36, 0, 0
   {
    PAGEALIGN 10
    TEXT "$CREATIONDATE"
@@ -297,7 +480,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  214, 0, 0
+  TEXT  37, 0, 0
   {
    PAGEALIGN 10
    TEXT "Title:"
@@ -307,7 +490,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  215, 0, 0
+  TEXT  38, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -319,7 +502,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  216, 0, 0
+  TEXT  39, 0, 0
   {
    PAGEALIGN 10
    TEXT 
@@ -332,7 +515,7 @@ PAGE ""
    FONT (12,0,0,700,0,0,0,"Arial")
    MULTILINE
   }
-  TEXT  217, 0, 0
+  TEXT  40, 0, 0
   {
    PAGEALIGN 10
    TEXT "Page:"
@@ -342,7 +525,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  218, 0, 0
+  TEXT  41, 0, 0
   {
    PAGEALIGN 10
    OUTLINE 5,1, (0,0,0)
@@ -354,7 +537,7 @@ PAGE ""
    FONT (12,0,0,700,0,128,0,"Arial")
    UPDATE 0
   }
-  TEXT  219, 0, 0
+  TEXT  42, 0, 0
   {
    PAGEALIGN 10
    TEXT "Revision:"
@@ -364,7 +547,7 @@ PAGE ""
    COLOR (0,0,0)
    FONT (12,0,0,700,0,0,0,"Arial")
   }
-  TEXT  220, 0, 0
+  TEXT  43, 0, 0
   {
    PAGEALIGN 10
    TEXT "$Revision"
@@ -375,7 +558,7 @@ PAGE ""
    FONT (12,0,0,700,0,204,0,"Arial")
    UPDATE 0
   }
-  GROUP  221, 0, 0
+  GROUP  44, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1120,2001,1501)
@@ -387,7 +570,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  222, 0, 0
+  GROUP  45, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1320,2001,1321)
@@ -399,7 +582,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  223, 0, 0
+  GROUP  46, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1260,2001,1261)
@@ -411,7 +594,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  224, 0, 0
+  GROUP  47, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1380,2001,1381)
@@ -423,7 +606,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  225, 0, 0
+  GROUP  48, 0, 0
   {
    PAGEALIGN 10
    RECT (1120,1440,2001,1441)
@@ -435,7 +618,7 @@ PAGE ""
     FILL (1,(0,0,0),0)
    }
   }
-  GROUP  226, 0, 0
+  GROUP  49, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1120,1301,1261)
@@ -446,7 +629,7 @@ PAGE ""
     POINTS ( (0,0), (0,140) )
    }
   }
-  GROUP  227, 0, 0
+  GROUP  50, 0, 0
   {
    PAGEALIGN 10
    RECT (1300,1260,1301,1501)
@@ -457,7 +640,7 @@ PAGE ""
     POINTS ( (0,0), (0,240) )
    }
   }
-  BMPPICT  228, 0, 0
+  BMPPICT  51, 0, 0
   {
    PAGEALIGN 10
    RECT (1140,1180,1279,1225)
