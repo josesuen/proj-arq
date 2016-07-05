@@ -2,8 +2,8 @@
 --
 -- Title       : CacheController
 -- Design      : FemtoMIPS
--- Author      : Wilson Gamer
--- Company     : Larc do Agreste
+-- Author      : 
+-- Company     : 
 --
 -------------------------------------------------------------------------------
 --
